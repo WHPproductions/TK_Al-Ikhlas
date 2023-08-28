@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <nav>
+        <img src="img/school_logo.jpg" alt="School logo">
+        <div class="links">
+            <ul>
+                <li>Home</li>
+                <li>Our Profile</li>
+                <li>Achievements</li>
+                <li>Message Us</li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="text">
+            <h1>Hi Winata, Welcome To Website</h1>
+            <p>ini adalah website latihan pertama</p>
+        </div>
+        <img src="img/high_school_bg.jpg" alt="High school background">
+    </header>
+    <main>
+        <section class="facilitation">
+            <h1><b>Our Facilitation</b></h1>
+            <ul>
+                <li>
+                    <img src="img/teacher.jpg" alt="Teacher">
+                    <p>Professional Teachers</p>
+                </li>
+                <li>
+                    <img src="img/sport_field.jpg" alt="Sport Field">
+                    <p>Sport Field</p>
+                </li>
+                <li>
+                    <img src="img/classroom.jpg" alt="Classroom">
+                    <p>Classroom</p>
+                </li>
+            </ul>
+        </section>
+        <hr>
+        <section class="message">
+            <h1>Message Us</h1>
+            <div class="container">
+                <form action="">
+                    <label for="name">First name</label>
+                    <p>:</p>
+                    <input type="text" id="name" name="name">
+                    
+                    <label for="birthday">Tanggal Lahir</label>
+                    <p>:</p>
+                    <input type="date" id="birthday" name="birthday">
+                    
+                    <label for="gender">Jenis Kelamin</label>
+                    <p>:</p>
+                    <div>
+                    <input type="radio" id="laki-laki" name="gender" value="laki-laki">
+                    <label for="laki-laki">Laki-laki</label>
+                    <input type="radio" id="perempuan" name="gender" value="perempuan">
+                    <label for="perempuan">Perempuan</label>
+                    </div>
+                    
+                    <label for="pesan">Pesan</label>
+                    <p>:</p>
+                    <textarea id="pesan" name="pesan" rows="4" cols="50">
+                    </textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+                <textarea id="result" name="result"></textarea>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Made by &copy Winata Hadi Pratama</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

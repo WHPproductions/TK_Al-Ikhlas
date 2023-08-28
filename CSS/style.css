@@ -1,0 +1,207 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+body {
+    background-image: url(../img/spikes.png);
+}
+
+/* -------------------------------- NAVIGATIONS STYLES -------------------------------- */
+
+nav {
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+nav img {
+    margin-left: 15px;
+    height: inherit;
+}
+
+nav div.links ul {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+}
+nav div.links ul li:hover {
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+nav div.links ul li {
+    padding: 10px;
+    border: 1px solid black;
+}
+nav div.links ul li:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+nav div.links ul li:last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* -------------------------------- HEADER STYLES -------------------------------- */
+
+header {
+    color: white;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+header img {
+    position: absolute;
+    min-width: 100vmax;
+    min-height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(50%);
+    z-index: 1;
+}
+
+header div.text {
+    margin: 10px;
+    position: absolute;
+    z-index: 2;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+header div.text h1{
+    font-size: 4rem;
+    line-height: 1.2em;
+}
+header div.text p{
+    font-size: 1.5rem;
+}
+
+/* -------------------------------- MAIN "FACILIY" SECTION STYLES -------------------------------- */
+
+main section.facilitation {
+    padding: 50px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+main section.facilitation h1 {
+    font-size: 3em;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+main section.facilitation ul{
+    margin: auto;
+    display: flex;
+    gap: 50px;
+}
+main section.facilitation ul li {
+    text-align: center;
+    transition: .2s;
+}
+main section.facilitation ul li:hover {
+    transform: translateY(-5%);
+}
+main section.facilitation ul li p {
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+main section.facilitation ul li img {
+    border-radius: 50%;
+    border: 5px solid rgb(59, 59, 59);
+    box-shadow: 0 0 10px black;
+    width: 20vmax;
+    height: 20vmax;
+}
+
+/* -------------------------------- MAIN "SEND MESSAGE" SECTION STYLES -------------------------------- */
+
+main section.message {
+    padding: 50px;
+}
+
+main section.message h1{
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    font-size: 3em;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+main section.message div.container {
+    display: flex;
+    gap: 3vw;
+    width: 100%;
+}
+
+main section.message div.container form {
+    line-height: 2em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    flex: 1;
+}
+main section.message div.container form p {
+    box-sizing: content-box;
+}
+main section.message div.container form input[type=submit]{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+main section.message div.container textarea#result {
+    flex: 1;
+}
+
+/* -------------------------------- FOOTER STYLES -------------------------------- */
+
+footer {
+    background-color: rgb(80, 80, 80);
+    text-align: right;
+}
+footer p {
+    padding: 3em;
+}
