@@ -47,20 +47,82 @@ table {
 	border-spacing: 0;
 }
 
-
+/* -------------------------------- DOCUMENT STYLES -------------------------------- */
 
 body {
-    background-image: url(../img/spikes.png);
+    background-image: url(../assets/spikes.png);
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+a {
+    text-decoration: none;
+}
+
+/* "invisible" functions */
+.desktop_invisible {
+    display: none;
+}
+.mobile_invisible{
+    display: block;
 }
 
 /* -------------------------------- NAVIGATIONS STYLES -------------------------------- */
 
+/* NAVIGATIONS FOR MOBILE */
+
+nav svg.hamburger {
+    padding: 10px;
+    border: 1px solid black;
+    margin-right: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+div.mobile_links{
+    position: fixed;
+    right: 0;
+    transform: translateX(100%);
+    top: 0;
+    bottom: 0;
+    background-color: rgb(102, 102, 102);
+    z-index: 3;
+    transition: transform .3s;
+}
+div.mobile_links ul {
+    flex-flow: column;
+    height: 100%;
+    margin-top: 65px;
+}
+div.mobile_links ul li {
+    border: 0px solid black;
+    padding: 2em 1em;
+    text-align: center;
+}
+div.mobile_links ul li a {
+    color: white;
+}
+div.mobile_links ul li:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+/* NAVIGATIONS FOR DESKTOP */
+
 nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 65px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    z-index: 4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 nav img {
@@ -72,6 +134,12 @@ nav div.links ul {
     margin-right: 15px;
     display: flex;
     flex-direction: row;
+}
+nav div.links ul li a {
+    color: black;
+}
+nav div.links ul li:hover a {
+    color: white;
 }
 nav div.links ul li:hover {
     background-color: gray;
@@ -85,6 +153,7 @@ nav div.links ul li {
 nav div.links ul li:first-child {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    text-decoration: none;
 }
 nav div.links ul li:last-child{
     border-top-right-radius: 5px;
@@ -98,6 +167,7 @@ header {
     position: relative;
     overflow: hidden;
     height: 100vh;
+    border-bottom: 2px solid black;
 }
 
 header img {
@@ -128,18 +198,19 @@ header div.text p{
 /* -------------------------------- MAIN "FACILIY" SECTION STYLES -------------------------------- */
 
 main section.facilitation {
-    padding: 50px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 main section.facilitation h1 {
     font-size: 3em;
-    margin-right: 50px;
-    margin-bottom: 50px;
+    margin: 50px;
 }
 main section.facilitation ul{
+    justify-content: center;
     margin: auto;
     display: flex;
     gap: 50px;
+    overflow-x: auto;
+    padding: 25px 10px;
 }
 main section.facilitation ul li {
     text-align: center;
@@ -185,10 +256,7 @@ main section.message div.container form {
     grid-template-columns: auto auto auto;
     flex: 1;
 }
-main section.message div.container form p {
-    box-sizing: content-box;
-}
-main section.message div.container form input[type=submit]{
+main section.message div.container form input[type=button]{
     grid-column-start: 1;
     grid-column-end: 4;
 }
@@ -204,4 +272,44 @@ footer {
 }
 footer p {
     padding: 3em;
+}
+
+/* -------------------------------- MEDIA TABLET QUERY -------------------------------- */
+
+@media only screen and (max-width: 800px) {
+    main section.message div.container {
+        flex-flow: column;
+    }
+    header div.text h1{
+        font-size: 2rem;
+    }
+    header div.text p{
+        font-size: 1em;
+    }
+}
+
+/* -------------------------------- MEDIA PHONE QUERY -------------------------------- */
+
+@media only screen and (max-width: 600px) {
+
+    /* "invisible" functions */
+    
+    .mobile_invisible{
+        display: none;
+    }
+    .desktop_invisible{
+        display: block;
+    }
+
+
+    main section.facilitation h1 {
+        margin-left: 10px;
+    }
+
+    main section.message {
+        padding: 10px;
+    }
+    main section.facilitation ul{
+        justify-content: normal;
+    }
 }

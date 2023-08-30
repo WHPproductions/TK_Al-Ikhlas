@@ -7,70 +7,83 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+    <div class="mobile_links">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#our profile">Our Profile</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#message_us">Message Us</a></li>
+        </ul>
+    </div>
     <nav>
-        <img src="img/school_logo.jpg" alt="School logo">
-        <div class="links">
+        <img src="assets/school_logo.jpg" alt="School logo">
+        <div class="links mobile_invisible">
             <ul>
-                <li>Home</li>
-                <li>Our Profile</li>
-                <li>Achievements</li>
-                <li>Message Us</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#our profile">Our Profile</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#message_us">Message Us</a></li>
             </ul>
         </div>
+        <svg viewBox="0 0 100 80" width="40" height="25" class="desktop_invisible hamburger">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+        </svg>
     </nav>
-    <header>
+    <header id="home">
         <div class="text">
-            <h1>Hi Winata, Welcome To Website</h1>
+            <h1>Hi User, Welcome To The Website</h1>
             <p>ini adalah website latihan pertama</p>
         </div>
-        <img src="img/high_school_bg.jpg" alt="High school background">
+        <img src="assets/high_school_bg.jpg" alt="High school background">
     </header>
-    <main>
-        <section class="facilitation">
+    <main id="our profile">
+        <section id="achievements" class="facilitation">
             <h1><b>Our Facilitation</b></h1>
             <ul>
                 <li>
-                    <img src="img/teacher.jpg" alt="Teacher">
+                    <img src="assets/teacher.jpg" alt="Teacher">
                     <p>Professional Teachers</p>
                 </li>
                 <li>
-                    <img src="img/sport_field.jpg" alt="Sport Field">
+                    <img src="assets/sport_field.jpg" alt="Sport Field">
                     <p>Sport Field</p>
                 </li>
                 <li>
-                    <img src="img/classroom.jpg" alt="Classroom">
+                    <img src="assets/classroom.jpg" alt="Classroom">
                     <p>Classroom</p>
                 </li>
             </ul>
         </section>
         <hr>
-        <section class="message">
+        <section id="message_us" class="message">
             <h1>Message Us</h1>
             <div class="container">
                 <form action="">
-                    <label for="name">First name</label>
-                    <p>:</p>
-                    <input type="text" id="name" name="name">
+                    <label for="name">Nama</label>
+                    <label for="name">:</label>
+                    <input type="text" id="name" name="name" required>
                     
                     <label for="birthday">Tanggal Lahir</label>
-                    <p>:</p>
-                    <input type="date" id="birthday" name="birthday">
+                    <label for="birthday">:</label>
+                    <input type="date" id="birthday" name="birthday" required>
                     
                     <label for="gender">Jenis Kelamin</label>
-                    <p>:</p>
+                    <label for="gender">:</label>
                     <div>
-                    <input type="radio" id="laki-laki" name="gender" value="laki-laki">
-                    <label for="laki-laki">Laki-laki</label>
-                    <input type="radio" id="perempuan" name="gender" value="perempuan">
-                    <label for="perempuan">Perempuan</label>
+                    <input type="radio" id="Laki-laki" name="gender" value="Laki-laki" required>
+                    <label for="Laki-laki">Laki-laki</label>
+                    <input type="radio" id="Perempuan" name="gender" value="Perempuan" required>
+                    <label for="Perempuan">Perempuan</label>
                     </div>
                     
-                    <label for="pesan">Pesan</label>
-                    <p>:</p>
-                    <textarea id="pesan" name="pesan" rows="4" cols="50">
+                    <label for="message">Pesan</label>
+                    <label for="message">:</label>
+                    <textarea id="message" name="message" rows="" cols="" required>
                     </textarea>
 
-                    <input type="submit" value="Submit">
+                    <input type="button" value="Submit" onclick="form_print()">
                 </form>
                 <textarea id="result" name="result"></textarea>
             </div>
