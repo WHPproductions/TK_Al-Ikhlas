@@ -83,7 +83,7 @@
                     <textarea id="message" name="message" rows="" cols="" required>
                     </textarea>
 
-                    <input type="button" value="Submit" onclick="form_print()">
+                    <input type="button" value="Submit" onclick="try {form_print()} catch {alert('Isikan semua form')}">
                 </form>
                 <textarea id="result" name="result"></textarea>
             </div>

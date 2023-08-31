@@ -8,7 +8,7 @@ let gender = document.getElementsByName("gender")
 gender = Array.from(gender).find(radio => radio.checked).value
 const birthday = document.getElementById("birthday").value
 const message = document.getElementById("message").value
-if (name && gender && birthday && message) {
+if (name && birthday && gender && message) {
     const welcomeText = document.querySelector("header div.text h1")
     welcomeText.innerText = `Hi ${name}, Welcome To The Website`
     
