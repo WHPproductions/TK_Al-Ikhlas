@@ -48,9 +48,25 @@ table {
 }
 
 /* -------------------------------- DOCUMENT STYLES -------------------------------- */
+@font-face {
+    font-family: Roboto-light;
+    src: url(../assets/Roboto/Roboto-Light.ttf);
+  }
+
+@font-face {
+    font-family: Neucha;
+    src: url(../assets/Neucha/Neucha-Regular.ttf);
+  }
+
+@font-face {
+    font-family: Roboto-bold;
+    src: url(../assets/Roboto/Roboto-Bold.ttf);
+  }
 
 body {
-    background-image: url(../assets/spikes.png);
+    /* background-image: url(../assets/double-bubble.png); */
+    background-color:#FEFAE0;
+    font-family: Roboto-light, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -74,7 +90,7 @@ a {
 /* NAVIGATIONS FOR MOBILE */
 
 nav svg.hamburger {
-    padding: 10px;
+    padding: 5px;
     border: 1px solid black;
     margin-right: 1em;
     border-radius: 10px;
@@ -120,7 +136,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: #5F6F52;
     z-index: 4;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
@@ -130,25 +146,31 @@ nav img {
     height: inherit;
 }
 
+nav h1 {
+    color: white;
+    font-family: Neucha;
+    font-size: 3em;
+}
+
 nav div.links ul {
     margin-right: 15px;
     display: flex;
     flex-direction: row;
 }
 nav div.links ul li a {
-    color: black;
+    color: white;
 }
 nav div.links ul li:hover a {
-    color: white;
+    color: rgb(66, 66, 66);
 }
 nav div.links ul li:hover {
-    background-color: gray;
-    color: white;
+    background-color: #FEFAE0;
     cursor: pointer;
 }
 nav div.links ul li {
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid rgb(190, 190, 190);
+    background-color: #38442f;
 }
 nav div.links ul li:first-child {
     border-top-left-radius: 5px;
@@ -182,6 +204,7 @@ header img {
 }
 
 header div.text {
+    font-family: Neucha;
     margin: 10px;
     position: absolute;
     z-index: 2;
@@ -195,14 +218,98 @@ header div.text p{
     font-size: 1.5rem;
 }
 
+/* -------------------------------- VISI DAN MISI SECTION STYLES -------------------------------- */
+
+#visi_dan_misi h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 50px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+#visi_dan_misi div.card {
+    /* box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75); */
+    border-radius: 15px;
+    border: 5px solid rgba(0,0,0,0.75);
+    display: flex;
+    flex: 1;
+    background-color: #B99470;
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+}
+
+#visi_dan_misi div.card div.text {
+    align-self: center;
+    flex-basis: 100%;
+    width: 50%;
+    color: white;
+    text-shadow: 2px 2px 4px #333;
+}
+
+#visi_dan_misi div.card div.text h2 {
+    text-align: center;
+    font-size: 2em;
+    margin: 15px auto;
+    font-family: Roboto-bold;
+}
+
+#visi_dan_misi div.card div.text P, #visi_dan_misi div.card div.text ul{
+    font-size: 1.2em;
+}
+
+#visi_dan_misi div.card ul{
+    list-style: circle inside;
+}
+
+#visi_dan_misi div.card div.text p {
+    text-align: center;
+}
+
+#visi_dan_misi div.card div.text ul li {
+    margin: 10px 10px;
+}
+
+#visi_dan_misi div.card div.images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    flex-basis: 100%;
+}
+#visi_dan_misi div.card div.images img {
+    width: 100%;
+    box-sizing: border-box;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px dashed black;
+    box-shadow: 0 0 10px black;
+}
+#visi_dan_misi div.card div.images svg {
+    width: 80%;
+    height: 80%;
+}
+#visi_dan_misi div.card div.images svg.one {
+    transform: rotate(-12deg);
+}
+#visi_dan_misi div.card div.images svg.two {
+    transform: rotate(12deg);
+}
+
 /* -------------------------------- MAIN "FACILIY" SECTION STYLES -------------------------------- */
 
 main section.facilitation {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 main section.facilitation h1 {
+    text-align: center;
     font-size: 3em;
     margin: 50px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 main section.facilitation ul{
     justify-content: center;
@@ -225,10 +332,66 @@ main section.facilitation ul li p {
 }
 main section.facilitation ul li img {
     border-radius: 50%;
-    border: 5px solid rgb(59, 59, 59);
+    border: 3px solid rgb(59, 59, 59);
     box-shadow: 0 0 10px black;
     width: 20vmax;
     height: 20vmax;
+}
+
+/* -------------------------------- KONTAK DAN ALAMAT SECTION STYLES -------------------------------- */
+
+#kontak_dan_alamat h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 50px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+#kontak_dan_alamat div.container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+#kontak_dan_alamat div.container h2 {
+    font-family: Roboto-bold;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+#kontak_dan_alamat div.container div.kontak {
+    text-align: center;
+    flex-basis: 50%;
+    display: grid;
+}
+
+#kontak_dan_alamat div.container div.kontak ul li {
+    font-size: 2.3em;
+    margin:10px 0;
+}
+
+#kontak_dan_alamat div.container div.kontak ul li svg {
+    height: 1em;
+    width: 1em;
+}
+
+#kontak_dan_alamat div.container div.alamat {
+    text-align: center;
+    flex-basis: 50%;
+}
+
+#kontak_dan_alamat div.container div.alamat h2,
+#kontak_dan_alamat div.container div.alamat iframe, 
+#kontak_dan_alamat div.container div.alamat div {
+    margin:20px 0;
+}
+
+#kontak_dan_alamat div.container div.alamat iframe {
+    width: 100%;
+    min-height: 300px;
+    border: 3px solid #38442f;
 }
 
 /* -------------------------------- MAIN "SEND MESSAGE" SECTION STYLES -------------------------------- */
@@ -267,6 +430,7 @@ main section.message div.container textarea#result {
 /* -------------------------------- FOOTER STYLES -------------------------------- */
 
 footer {
+    color: white;
     background-color: rgb(80, 80, 80);
     text-align: right;
 }
@@ -277,6 +441,11 @@ footer p {
 /* -------------------------------- MEDIA TABLET QUERY -------------------------------- */
 
 @media only screen and (max-width: 800px) {
+
+    nav h1 {
+        font-size: 1.5em;
+    }
+    
     main section.message div.container {
         flex-flow: column;
     }
@@ -286,11 +455,19 @@ footer p {
     header div.text p{
         font-size: 1em;
     }
+    
+    #kontak_dan_alamat div.container {
+        flex-flow: column;
+    }
 }
 
 /* -------------------------------- MEDIA PHONE QUERY -------------------------------- */
 
 @media only screen and (max-width: 600px) {
+
+    #visi_dan_misi div.card {
+        flex-wrap: wrap;
+    }
 
     /* "invisible" functions */
     
@@ -301,6 +478,11 @@ footer p {
         display: block;
     }
 
+    /* -------------------------------- NAVIGATIONS STYLES -------------------------------- */
+
+    nav {
+        height: 35px;
+    }
 
     main section.facilitation h1 {
         margin-left: 10px;
@@ -313,3 +495,14 @@ footer p {
         justify-content: normal;
     }
 }
+
+/* colour pallette */
+
+/*
+#5F6F52 - Reseda green
+#A9B388 - Sage
+#FEFAE0 - Cornsilj
+#B99470 - Lion
+*/
+
+/*https://colorhunt.co/palette/5f6f52a9b388fefae0b99470*/
